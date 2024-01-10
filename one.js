@@ -1,76 +1,52 @@
-// if
+// for
 
-// if (true){
+// for (let i = 0; i <= 10; i++) {
+//     const element = i;
+//     if (element == 5) {
+//         console.log("ok vai");
+//     }
+
+//     console.log(element);
 
 // }
+// console.log(element);
 
-// if (false){
-
-// }
-
-
-// const isUserloggedIn = true
-// const temp = 16
-
-// if (temp < 20) {
-//     console.log("less than 20");
-// } else {
-//     console.log("greater than 20");
-// }
-// console.log("ex");
-
-// if (2 == "2"){
-//     console.log("true");
-// }
-
-// if (2 === "2"){
-//     console.log("same type");
-// }
-// else console.log("not same type");
-
-// if (2 != 3){
-//     console.log("yes ");
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`Outer loop value : ${i}`);
+//     for (let j = 0; j <= 10; j++) {
+//     //    console.log(`inner loop value : ${j} and outer loop ${i}`);
+//     console.log(i + '*' + j + ' = ' + i*j);
+//     }
+    
 // }
 
 
-
-// <, >, <=, >=, ==, !=, === (comparison & check data type)
-
-
-// const score = 200
-// if (score > 100) {
-//     const power = "fly"
-//     var power = "fly" // dont use 
-//     console.log(`User power: ${power}`);
-// }
-//  console.log(`User power: ${power}`);
-
-
-
-const balance = 1000
-
-// if (balance > 500) console.log("test"); // implicit scope
-
-// if (balance < 500 ) {
-//     console.log("less than 500");
-// } else if (balance < 750) {
-//     console.log("less than 750");
-// } else if (balance < 900) {
-//     console.log("less than 900");
-// } else{
-//     console.log("less than 1200");
-// }
-
-
-const UserloggedIn = true
-const debitcard = true
-const loggedInFromGoogle = false
-const loggedInFromEmail = true
-
-if (UserloggedIn && debitcard && 2==3) {
-    console.log("allowed to buy");
+let myArray = ["flash", "ironman", "batman"]
+console.log(myArray.length);
+for (let index = 0; index < myArray.length; index++) {
+    // const element = myArray[index];
+    // console.log(element);
+    
 }
 
-if (loggedInFromEmail || loggedInFromGoogle || guestUser) {
-    console.log("user logged in");
+
+
+// break and continue
+
+// for (let index = 1; index <= 20; index++) {
+//     if (index == 5) {
+//         console.log("5 is here mf");
+//         break
+//     }
+//     console.log(`value of i is ${index}`);;
+    
+// }
+
+for (let index = 1; index <= 20; index++) {
+    if (index == 5) {
+        console.log("5 is here mf");
+        continue
+    }
+    console.log(`value of i is ${index}`);;
+    
 }
