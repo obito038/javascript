@@ -2,30 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM learning</title>
-    <style>
-        .bg-black{
-            background-color: #212121;
-            color: #fff;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
 </head>
-<body class ="bg-black">
-    <div >
-        <h1 id="title" class="heading" >DOM learning on YT <span style="display: none;">test text</span></h1>
-        <h2>lorem ipsum dpoplr monor</h2>
-        <h3>lorem ipsum dpoplr mono</h3>
-        <h4>lorem ipsum dpoplr mono</h4>
-        <p>lorem ipsum</p>
-        <input type="password" name="pass" id="pd">
-
-        <ul>
-            <li class="list-item">one</li>
-            <li class="list-item">two</li>
-            <li class="list-item">three</li>
-            <li class="list-item">four</li>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
-    
     </div>
 </body>
+
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+        //attachEvent()
+    //jQuery - on
+
+
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("owl clciked again")
+    // }, false )
+
+
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keycode
+
+
+  
+
+
+    //bubbling
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clcked inside ul");
+    // }, false )
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clcked");
+    // }, false )
+
+
+    // Capturing 
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clcked inside ul");
+    // }, true )
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clcked");
+    // }, true )
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clcked inside ul");
+    }, false )
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clcked");
+        e.stopPropagation()
+    }, false )
+
+    document.getElementById('google').addEventListener
+    ('click', function(){
+        e.preventDefault(); 
+        e.stopPropagation()
+        console.log("google clicked");
+    }, false)
+
+
+    
+    
+</script>
 </html>
